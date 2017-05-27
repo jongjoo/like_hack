@@ -1,9 +1,15 @@
 Rails.application.routes.draw do
   get 'home/index'
+<<<<<<< HEAD
   get 'home/login'
   get 'auth/facebook', as: "auth_provider"
   get 'auth/facebook/callback', to: 'home#login'
   
+=======
+
+
+  # root "home#index"
+>>>>>>> c1615959742abb8470cf5617ac53e9e94b6a8899
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
