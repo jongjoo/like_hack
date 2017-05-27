@@ -3,8 +3,12 @@ Rails.application.routes.draw do
   
   devise_for :users
   get 'home/index'
-  root "home#index"
+
+  get 'home/login'
+  get 'auth/facebook', as: "auth_provider"
+  get 'auth/facebook/callback', to: 'home#login'
   
+  root "home#index"
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
